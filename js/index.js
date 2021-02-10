@@ -39,4 +39,25 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//changes title
+const titleSelection = document.querySelector("title");
+//console.log(titleSelection);
+titleSelection.textContent = "Great Idea!";
+
+//removes script
+const scriptSelection = document.querySelector("script");
+//console.log(scriptSelection);
+scriptSelection.remove();
+
+//puts a texts (one by one; multiple per .map?)
+const multipleASelections = document.querySelectorAll("a");
+//console.log(multipleASelections);
+multipleASelections[0].textContent = "Services";
+multipleASelections[1].textContent = "Product";
+multipleASelections[2].textContent = "Vision";
+multipleASelections[3].textContent = "Features";
+multipleASelections[4].textContent = "About";
+multipleASelections[5].textContent = "Contact";
+
