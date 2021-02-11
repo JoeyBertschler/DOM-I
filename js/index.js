@@ -37,15 +37,18 @@ const siteContent = {
   },
 };
 
+
 //changes title
 const titleSelection = document.querySelector("title");
 //console.log(titleSelection);
 titleSelection.textContent = "Great Idea!";
 
+
 //removes script
 const scriptSelection = document.querySelector("script");
 //console.log(scriptSelection);
 scriptSelection.remove();
+
 
 //puts a texts (one by one; multiple per .map?)
 const multipleASelections = document.querySelectorAll("a");
@@ -57,9 +60,11 @@ multipleASelections[3].textContent = "Features";
 multipleASelections[4].textContent = "About";
 multipleASelections[5].textContent = "Contact";
 
+
 // Example: Update the img src for the logo; put code here 4 order
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 
 //put in text, some bold
 const hSelection = document.querySelector("h1");
@@ -67,16 +72,19 @@ const hSelection = document.querySelector("h1");
 //hSelection.textContent = "DOM<br> Is<br> Awesome"; -> doesn't recognize the line breaks
 hSelection.innerHTML = "DOM <br> Is<br> Awesome"; //works but should be avoided: "inner html hack vector/unsafe"
 
+
 //put in text
 const buttonSelection = document.querySelector("button");
 //console.log(buttonSelection);
 //hSelection.textContent = "DOM<br> Is<br> Awesome"; -> doesn't recognize the line breaks
 buttonSelection.innerHTML = "Get Started"; //works but should be avoided: "inner html hack vector/unsafe"
 
+
 //put in src
 const imageSelection = document.querySelector("#cta-img");
 // imageSelection.setAttribute('src', 'img/header-img.png');
 imageSelection.src = 'img/header-img.png'
+
 
 //put in text for all h4
 const h4Selection = document.querySelectorAll('h4');
@@ -87,6 +95,7 @@ h4Selection[2].textContent = "Services";
 h4Selection[3].textContent = "Product";
 h4Selection[4].textContent = "Vision";
 h4Selection[5].textContent = "Contact ";
+
 
 //put in text for all p
 const pSelection = document.querySelectorAll('p');
@@ -102,6 +111,37 @@ pSelection[6].textContent = "1 (888) 888-8888";
 pSelection[7].textContent = "sales@greatidea.io";
 pSelection[8].textContent = "Copyright Great Idea! 2018";
 
+
 //in 54 put in src / update the img src for the 2nd logo
 let middleLogo = document.getElementById("middle-img");
-middleLogo.src = 'img/mid-page-accent.jpg'
+middleLogo.src = 'img/mid-page-accent.jpg';
+
+
+//Change the color of the navigation text to be green.
+  // const navTextColor = document.querySelector('nav');
+  //navTextColor.style.color = "green"; -> would work for background color, need to aim at a tags
+const navTextColorSecondAttempt = document.querySelectorAll('nav a');
+// console.log(navTextColorSecondAttempt)
+function colorTextContent(element) {element.style.color = "green";}
+navTextColorSecondAttempt.forEach(colorTextContent)
+
+
+//.appendChild() .prepend() add two new items to nav system
+const navPrependSelection = document.querySelector('nav');
+
+const navPrepend = document.createElement('a');
+  navPrepend.style.fontSize = "1.69rem";
+  navPrepend.style.color = "pink";
+navPrepend.setAttribute('href', '#');
+navPrepend.textContent = "Start";
+navPrependSelection.prepend(navPrepend);
+
+const navAppend = document.createElement('a');
+  navAppend.style.fontSize = "0.420rem";
+  navAppend.style.color = "blue";
+navAppend.setAttribute('href', '#');
+navAppend.textContent = "End";
+navPrependSelection.appendChild(navAppend);
+
+
+//

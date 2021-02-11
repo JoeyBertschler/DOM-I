@@ -41,6 +41,13 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [ ] Check your work by looking at the [original html](original.html) in the browser
 
+## Submission Format
+**Follow these steps for completing your project.**
+
+* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+------------------------------------------------------------------------------------------------
+
 ### Task 3: Stretch
 
 * [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
@@ -49,9 +56,3 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 #### Stretch Project: Digital Timer
 
 This project is heavier on logic but employs some DOM manipulation to achieve its goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
-
-## Submission Format
-
-**Follow these steps for completing your project.**
-
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
