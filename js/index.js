@@ -37,10 +37,6 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
 //changes title
 const titleSelection = document.querySelector("title");
 //console.log(titleSelection);
@@ -61,3 +57,51 @@ multipleASelections[3].textContent = "Features";
 multipleASelections[4].textContent = "About";
 multipleASelections[5].textContent = "Contact";
 
+// Example: Update the img src for the logo; put code here 4 order
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//put in text, some bold
+const hSelection = document.querySelector("h1");
+//console.log(hSelection);
+//hSelection.textContent = "DOM<br> Is<br> Awesome"; -> doesn't recognize the line breaks
+hSelection.innerHTML = "DOM <br> Is<br> Awesome"; //works but should be avoided: "inner html hack vector/unsafe"
+
+//put in text
+const buttonSelection = document.querySelector("button");
+//console.log(buttonSelection);
+//hSelection.textContent = "DOM<br> Is<br> Awesome"; -> doesn't recognize the line breaks
+buttonSelection.innerHTML = "Get Started"; //works but should be avoided: "inner html hack vector/unsafe"
+
+//put in src
+const imageSelection = document.querySelector("#cta-img");
+// imageSelection.setAttribute('src', 'img/header-img.png');
+imageSelection.src = 'img/header-img.png'
+
+//put in text for all h4
+const h4Selection = document.querySelectorAll('h4');
+//console.log(h4Selection);
+h4Selection[0].textContent = "Features";
+h4Selection[1].textContent = "About";
+h4Selection[2].textContent = "Services";
+h4Selection[3].textContent = "Product";
+h4Selection[4].textContent = "Vision";
+h4Selection[5].textContent = "Contact ";
+
+//put in text for all p
+const pSelection = document.querySelectorAll('p');
+console.log(pSelection);
+pSelection[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pSelection[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pSelection[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pSelection[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pSelection[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// doesn't do linebreaks pSelection[5].textContent = "123 Way 456 Street <br> Somewhere, USA";
+pSelection[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA"; 
+pSelection[6].textContent = "1 (888) 888-8888";
+pSelection[7].textContent = "sales@greatidea.io";
+pSelection[8].textContent = "Copyright Great Idea! 2018";
+
+//in 54 put in src / update the img src for the 2nd logo
+let middleLogo = document.getElementById("middle-img");
+middleLogo.src = 'img/mid-page-accent.jpg'
